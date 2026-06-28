@@ -1,5 +1,5 @@
 CREATE TABLE clientes (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     data_nasc DATE NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,

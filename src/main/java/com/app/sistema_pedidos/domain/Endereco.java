@@ -1,6 +1,9 @@
 package com.app.sistema_pedidos.domain;
 
+import com.app.sistema_pedidos.dto.DadosEndereco;
 import jakarta.persistence.Embeddable;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,4 +22,13 @@ public class Endereco {
     private String uf;
 
 
+    public Endereco(DadosEndereco endereco) {
+        this.logradouro = endereco.logradouro();
+        this.bairro = endereco.bairro();
+        this.cep = endereco.cep();
+        this.numero = endereco.numero();
+        this.complemento = endereco.complemento();
+        this.cidade = endereco.cidade();
+        this.uf = endereco.uf();
+    }
 }

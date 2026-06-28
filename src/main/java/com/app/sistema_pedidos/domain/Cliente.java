@@ -1,5 +1,6 @@
 package com.app.sistema_pedidos.domain;
 
+import com.app.sistema_pedidos.dto.DadosCadastroCliente;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,5 +27,13 @@ public class Cliente {
         this.cpf = cpf;
         this.dataNasc = dataNasc;
         this.endereco = endereco;
+    }
+
+    public Cliente(DadosCadastroCliente dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.cpf = dados.cpf();
+        this.dataNasc = dados.dataNasc();
+        this.endereco = new Endereco(dados.endereco());
     }
 }
