@@ -1,9 +1,7 @@
 package com.app.sistema_pedidos.domain;
 
-import com.app.sistema_pedidos.dto.DadosEndereco;
+import com.app.sistema_pedidos.dto.cliente.DadosEndereco;
 import jakarta.persistence.Embeddable;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

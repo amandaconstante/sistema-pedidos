@@ -1,9 +1,9 @@
 package com.app.sistema_pedidos.controller;
 
 import com.app.sistema_pedidos.domain.Cliente;
-import com.app.sistema_pedidos.dto.DadosCadastroCliente;
-import com.app.sistema_pedidos.dto.DadosCliente;
-import com.app.sistema_pedidos.dto.DadosResponseCliente;
+import com.app.sistema_pedidos.dto.cliente.DadosCadastroCliente;
+import com.app.sistema_pedidos.dto.cliente.DadosCliente;
+import com.app.sistema_pedidos.dto.cliente.DadosResponseCliente;
 import com.app.sistema_pedidos.repository.ClienteRepository;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;

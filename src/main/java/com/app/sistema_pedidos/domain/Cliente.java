@@ -1,6 +1,6 @@
 package com.app.sistema_pedidos.domain;
 
-import com.app.sistema_pedidos.dto.DadosCadastroCliente;
+import com.app.sistema_pedidos.dto.cliente.DadosCadastroCliente;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

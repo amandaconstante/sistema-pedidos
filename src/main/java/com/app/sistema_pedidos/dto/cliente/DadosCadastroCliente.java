@@ -1,4 +1,4 @@
-package com.app.sistema_pedidos.dto;
+package com.app.sistema_pedidos.dto.cliente;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.Valid;

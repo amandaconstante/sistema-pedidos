@@ -1,4 +1,4 @@
-package com.app.sistema_pedidos.dto;
+package com.app.sistema_pedidos.dto.cliente;
 
 import com.app.sistema_pedidos.domain.Cliente;
 
