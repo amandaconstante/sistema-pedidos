@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/pedido")
+@RequestMapping("/pedidos")
 public class PedidoController {
     private final PedidoService pedidoService;
     private final PedidoRepository pedidoRepository;
