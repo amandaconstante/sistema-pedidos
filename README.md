@@ -1,4 +1,4 @@
-#  Sistema de Gestão de Pedidos - API REST
+#  [Sistema de Gestão de Pedidos](https://sistema-pedidos-frontend-production.up.railway.app/) - API REST
 
 
 ## 🛠️ Tecnologias Utilizadas
@@ -11,8 +11,8 @@
 * **Railway** (Hospedagem em Nuvem)
 
 ## 🌐 Links do Projeto
-* **Repositório do Front-end:** `https://github.com/amandaconstante/sistema-pedidos-frontend`
-* **Aplicação Web (Front-end ao vivo):** `https://sistema-pedidos-frontend-production.up.railway.app/`
+* **Repositório do Front-end:** https://github.com/amandaconstante/sistema-pedidos-frontend
+* **Aplicação Web (Front-end):** https://sistema-pedidos-frontend-production.up.railway.app/
 
 
 
