@@ -14,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
@@ -37,6 +39,12 @@ public class ClienteController {
     public ResponseEntity<Page<DadosCliente>> listar(@PageableDefault(size = 4, sort = {"nome"}) Pageable pageable) {
         var page = clienteRepository.findAll(pageable).map(DadosCliente::new);
         return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/todos")
+    public ResponseEntity<List<DadosCliente>> listaTodos() {
+        var lista = clienteRepository.findAll().stream().map(DadosCliente::new).toList();
+        return ResponseEntity.ok(lista);
     }
 
 }
