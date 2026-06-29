@@ -9,12 +9,13 @@ import java.time.LocalDateTime;
 public record DadosPedido (
         Long id,
         Long clienteId,
+        String clienteNome,
         BigDecimal valorTotal,
         String status,
         @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
         LocalDateTime dataCriacao
 ) {
     public DadosPedido(Pedido pedido) {
-        this(pedido.getId(), pedido.getCliente().getId(), pedido.getValorTotal(), pedido.getStatus().name(), pedido.getDataCriacao());
+        this(pedido.getId(), pedido.getCliente().getId(), pedido.getCliente().getNome(), pedido.getValorTotal(), pedido.getStatus().name(), pedido.getDataCriacao());
     }
 }

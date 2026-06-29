@@ -11,10 +11,7 @@ import com.app.sistema_pedidos.repository.PedidoRepository;
 import com.app.sistema_pedidos.repository.ProdutoRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
 @Service
@@ -22,7 +19,6 @@ public class PedidoService {
     private final PedidoRepository pedidoRepository;
     private final ProdutoRepository produtoRepository;
     private final ClienteRepository clienteRepository;
-
 
     public DadosPedido cadastrarPedido(@Valid DadosCadastroPedido dados) {
         var cliente = clienteRepository.findById(dados.clienteId()).orElseThrow(() -> new ValidacaoException("Cliente não encontrado"));

@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
