@@ -1,7 +1,9 @@
 package com.app.sistema_pedidos.controller;
 
 import com.app.sistema_pedidos.dto.pedido.DadosCadastroPedido;
+import com.app.sistema_pedidos.dto.pedido.DadosDetalhePedido;
 import com.app.sistema_pedidos.dto.pedido.DadosPedido;
+import com.app.sistema_pedidos.infra.exception.ValidacaoException;
 import com.app.sistema_pedidos.repository.PedidoRepository;
 import com.app.sistema_pedidos.service.PedidoService;
 import jakarta.validation.Valid;
@@ -45,5 +47,11 @@ public class PedidoController {
         var page = pedidoRepository.buscarComFiltros(nomeFiltro, inicio, fim, pageable).map(DadosPedido::new);
 
         return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DadosDetalhePedido> detalhar(@PathVariable Long id) {
+        var pedido = pedidoRepository.findById(id).orElseThrow(() -> new ValidacaoException("Pedido não encontrado!"));
+        return ResponseEntity.ok(new DadosDetalhePedido(pedido));
     }
 }
